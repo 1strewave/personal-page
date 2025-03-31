@@ -1,0 +1,401 @@
+/* Base styles */
+:root {
+  --background-color: #121212;
+  --text-color: #e0e0e0;
+  --accent-color: #ff3e9d;
+  --secondary-color: #4169e1;
+  --card-bg-color: #1e1e1e;
+  --header-bg-color: #0a0a0a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header and Navigation */
+header {
+  background-color: var(--header-bg-color);
+  padding: 1rem 0;
+  border-bottom: 1px solid #333;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--accent-color);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Profile Section */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  border: 3px solid var(--accent-color);
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #aaa;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #333;
+  color: var(--text-color);
+  font-size: 1.5rem;
+  transition: all 0.3s;
+}
+
+.social-icon:hover {
+  transform: translateY(-5px);
+}
+
+.discord:hover {
+  background-color: #7289da;
+}
+
+.telegram:hover {
+  background-color: #0088cc;
+}
+
+.github:hover {
+  background-color: #333;
+}
+
+.youtube:hover {
+  background-color: #ff0000;
+}
+
+.vk:hover {
+  background-color: #4c75a3;
+}
+
+/* Projects Section */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background-color: var(--card-bg-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-title {
+  color: var(--accent-color);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.project-description {
+  flex-grow: 1;
+  margin-bottom: 1.5rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tag {
+  background-color: #333;
+  color: var(--text-color);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.read-more-btn {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 4px;
+  text-align: center;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  align-self: center;
+}
+
+.read-more-btn:hover {
+  background-color: #3a5fd9;
+  text-decoration: none;
+}
+
+/* Project Detail Page */
+.project-detail {
+  background-color: var(--card-bg-color);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.project-authors {
+  margin-bottom: 2rem;
+  color: #aaa;
+}
+
+.author {
+  color: var(--accent-color);
+  margin-right: 0.5rem;
+}
+
+.debug-section {
+  margin: 2rem 0;
+  padding: 1rem;
+  background-color: #222;
+  border-radius: 4px;
+}
+
+.debug-info {
+  color: #ff5252;
+  font-family: monospace;
+  margin-bottom: 0.5rem;
+}
+
+.buy-btn {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 0.7rem 1.5rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 1rem 0;
+  transition: background-color 0.3s;
+}
+
+.buy-btn:hover {
+  background-color: #3a5fd9;
+}
+
+.links-section {
+  margin: 2rem 0;
+}
+
+.project-link {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--secondary-color);
+  font-family: monospace;
+}
+
+.video-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+/* Counter Section */
+.counter-section {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--card-bg-color);
+  border-radius: 8px;
+}
+
+.counter-section h1 {
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+}
+
+#count-display, #last-click {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.click-btn {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 0.7rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.click-btn:hover {
+  background-color: #3a5fd9;
+}
+
+/* WebApi Section */
+.webapi-section {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 2rem;
+}
+
+.sidebar {
+  background-color: var(--card-bg-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.api-menu {
+  list-style: none;
+}
+
+.api-menu li {
+  margin-bottom: 1rem;
+}
+
+.api-menu a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.api-menu a:hover {
+  color: var(--accent-color);
+}
+
+.api-content {
+  background-color: var(--card-bg-color);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.api-content h1 {
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+}
+
+.api-endpoint {
+  margin-bottom: 2rem;
+}
+
+.api-endpoint a {
+  color: var(--secondary-color);
+  font-family: monospace;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .webapi-section {
+      grid-template-columns: 1fr;
+  }
+
+  .video-section {
+      grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  nav ul li {
+      margin: 0.5rem 0;
+  }
+
+  .profile-image {
+      width: 120px;
+      height: 120px;
+  }
+}
